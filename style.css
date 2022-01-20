@@ -1,0 +1,74 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+:root {
+  --text-color: rgba(83, 83, 83, 1);
+}
+
+body {
+  font-family: sans-serif;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game {
+  position: relative;
+  height: 30vh;
+  width: 100%;
+}
+
+.scores {
+  position: absolute;
+  right: 1%;
+  top: 0%;
+  font-size: 2.5vmin;
+  color: var(--text-color);
+}
+
+.start-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4vmin;
+  color: var(--text-color);
+  z-index: 9999;
+}
+
+.dino {
+  --bottom: 0;
+  position: absolute;
+  left: 1%;
+  bottom: calc(var(--bottom) * 1%);
+  width: 15vmin;
+}
+
+.ground {
+  --left: 0;
+  position: absolute;
+  bottom: 0%;
+  left: calc(var(--left) * 1%);
+  width: 300%;
+  height: 5vmin;
+}
+
+.hide {
+  display: none;
+}
+
+.cactus {
+  --right: -10;
+  position: absolute;
+  width: 7vmin;
+  bottom: 0%;
+  right: calc(var(--right) * 1%);
+}
